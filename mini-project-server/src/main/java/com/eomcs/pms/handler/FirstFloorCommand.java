@@ -43,11 +43,13 @@ public class FirstFloorCommand implements Command {
           } else if (!answer.equalsIgnoreCase("websocket")) {
             out.println("자물쇠는 열리지 않았다.");
             out.println("뒤에서 인기척이 느껴집니다.");
+            out.println("도망쳤습니다.");
             break;
           }
 
         } else {
           out.println("뒤에서 인기척이 느껴집니다.");
+          out.println("도망쳤습니다.");
           break;
         }
       }
