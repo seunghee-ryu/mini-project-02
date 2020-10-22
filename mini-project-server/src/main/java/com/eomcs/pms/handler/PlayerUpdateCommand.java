@@ -46,6 +46,7 @@ public class PlayerUpdateCommand implements Command {
           player.setStage(stage);
 
           out.println("게시글을 변경하였습니다.");
+          out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
         }
         return;
       }

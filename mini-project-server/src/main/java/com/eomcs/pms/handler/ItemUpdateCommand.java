@@ -40,6 +40,7 @@ public class ItemUpdateCommand implements Command {
       item.setName(name);
       item.setLocation(location);
       out.println("아이템을 변경하였습니다.");
+      out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

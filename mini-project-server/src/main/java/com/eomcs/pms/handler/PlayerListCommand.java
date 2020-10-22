@@ -31,6 +31,7 @@ public class PlayerListCommand implements Command {
           player.getStage()
           );
     }
+    out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
   }
 
 }

@@ -30,6 +30,8 @@ public class ItemListCommand implements Command {
           item.getName()
           );
     }
+
+    out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
   }
 
 }

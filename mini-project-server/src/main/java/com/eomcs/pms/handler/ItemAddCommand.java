@@ -26,6 +26,7 @@ public class ItemAddCommand implements Command {
       itemList.add(item);
 
       out.println("아이템을 등록하였습니다.");
+      out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
     } catch(Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

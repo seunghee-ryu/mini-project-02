@@ -7,6 +7,8 @@ import com.eomcs.pms.domain.Item;
 import com.eomcs.pms.domain.Player;
 import com.eomcs.pms.handler.BedroomCommand;
 import com.eomcs.pms.handler.EntryCommand;
+import com.eomcs.pms.handler.FirstFloorCommand;
+import com.eomcs.pms.handler.HallwayCommand;
 import com.eomcs.pms.handler.ItemAddCommand;
 import com.eomcs.pms.handler.ItemDeleteCommand;
 import com.eomcs.pms.handler.ItemDetailCommand;
@@ -41,7 +43,7 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/item/list", new ItemListCommand(itemList));
     context.put("/item/detail", new ItemDetailCommand(itemList));
     context.put("/item/update", new ItemUpdateCommand(itemList));
-    context.put("/item/use", new ItemDeleteCommand(itemList)); // delete
+    context.put("/item/delete", new ItemDeleteCommand(itemList)); // delete
 
     // 플레이어
     context.put("/player/add", new PlayerAddCommand(playerList));
@@ -57,8 +59,17 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/start", new StartCommand());
     context.put("/entry", new EntryCommand());
 
-    // 침실로
+    // 침실
     context.put("/move/bedroom", new BedroomCommand());
+
+    // 복도
+    context.put("/move/hallway", new HallwayCommand());
+
+    // 1층
+    context.put("/move/1f", new FirstFloorCommand());
+
+    // 서재
+    //    context.put("/move/library", new LibraryCommand());
   }
 
   @Override

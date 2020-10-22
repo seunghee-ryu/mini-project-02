@@ -30,11 +30,13 @@ public class ItemDeleteCommand implements Command {
       String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
         out.println("아이템 삭제를 취소하였습니다.");
+
         return;
       }
 
       InventoryList.remove(index);
       out.println("아이템을 삭제하였습니다.");
+      out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
     } catch (Exception e) {
       out.printf("아이템 삭제 처리 중 오류 발생! - %s\n", e.getMessage());

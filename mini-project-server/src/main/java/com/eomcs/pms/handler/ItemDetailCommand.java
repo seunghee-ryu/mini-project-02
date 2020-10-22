@@ -31,6 +31,7 @@ public class ItemDetailCommand implements Command {
       out.printf("아이템 이름: %s\n", item.getName());
       out.printf("발견 장소: %s\n", item.getLocation());
       out.printf("아이템 내용: %s\n", item.getContent());
+      out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
 
     } catch (Exception e) {
