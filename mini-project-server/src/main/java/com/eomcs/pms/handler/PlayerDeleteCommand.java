@@ -17,21 +17,52 @@ public class PlayerDeleteCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
 
-    /*  try {
+    /* try {
       out.println("[플레이어 삭제]");
 
       while (true) {
         String name = Prompt.inputString("이름? ", out, in);
+        for (int i = 0; i < playerList.size(); i++) {
+          Player player = playerList.get(i);
+          if (player.getName() != name) {
+            out.println("해당 이름의 플레이어가 존재하지않습니다.");
+            break;
+          } else if (player.getName().equals(name)) {
+            out.println("해당 이름의 플레이어가 존재합니다.");
+
+            String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
+            if (!response.equalsIgnoreCase("y")) {
+              out.println("플레이어 삭제를 취소하였습니다.");
+              return;
+            }
+            playerList.remove(player);
+            out.println("플레이어를 삭제하였습니다.");
+          }
+        }
+        return;
+      }
+    } catch (Exception e) {
+      out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
+    }
+  }
+
+
+  while (true) {
+         String name = Prompt.inputString("이름? ", out, in);
         Player player = findByName(name);
 
-        /* if (findByName(name) == null) {
-              out.println("해당 이름의 플레이어가 없습니다.");
-              return;
-            } else if (findByName(name) != null) {
-              out.println("해당 이름의 플레이어가 존재합니다.");
+        if (findByName(name) != player) {
+          out.println("해당 이름의 플레이어가 없습니다.");
+          return;
+        }
 
+         if (findByName(name) == null) {
+          out.println("해당 이름의 플레이어가 없습니다.");
+          return;
+        } else if (findByName(name) != null) {
+          out.println("해당 이름의 플레이어가 존재합니다.");
 
-        if (findByName(name) == player) {
+        if (findByName(name) == null) {
           out.println("해당 이름의 플레이어가 존재합니다.");
 
           String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
@@ -39,7 +70,7 @@ public class PlayerDeleteCommand implements Command {
             out.println("플레이어 삭제를 취소하였습니다.");
             return;
           }
-          playerList.remove(name);
+          playerList.remove(player);
           out.println("플레이어를 삭제하였습니다.");
         }
         return;
@@ -74,7 +105,6 @@ public class PlayerDeleteCommand implements Command {
     }
   }
 
-
   private int indexOf(int no) {
     for (int i = 0; i < playerList.size(); i++) {
       Player player = playerList.get(i);
@@ -84,16 +114,16 @@ public class PlayerDeleteCommand implements Command {
     }
     return -1;
   }
+}
 
-  /* public Player findByName(String name) {
+/* public Player findByName(String name) {
     for (int i = 0; i < playerList.size(); i++) {
       Player player = playerList.get(i);
-      if (player.getName().equals(name)) {
+      if (player.getName() == name) {
         playerList.remove(player);
         return player;
       }
     }
     return null;
   } */
-}
 

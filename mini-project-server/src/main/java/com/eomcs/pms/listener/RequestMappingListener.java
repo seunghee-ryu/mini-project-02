@@ -11,6 +11,7 @@ import com.eomcs.pms.handler.ItemDeleteCommand;
 import com.eomcs.pms.handler.ItemDetailCommand;
 import com.eomcs.pms.handler.ItemListCommand;
 import com.eomcs.pms.handler.ItemUpdateCommand;
+import com.eomcs.pms.handler.LibraryCommand;
 import com.eomcs.pms.handler.PlayerAddCommand;
 import com.eomcs.pms.handler.PlayerDeleteCommand;
 import com.eomcs.pms.handler.PlayerDetailCommand;
@@ -55,6 +56,9 @@ public class RequestMappingListener implements ApplicationContextListener {
     // 시작
     context.put("/start", new StartCommand());
     context.put("/entry", new EntryCommand());
+
+    // 2층 서재
+    context.put("/move/library", new LibraryCommand());
   }
 
   @Override

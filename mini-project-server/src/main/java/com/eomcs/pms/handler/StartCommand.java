@@ -9,29 +9,22 @@ public class StartCommand implements Command {
   @Override
   public void execute(PrintWriter out, BufferedReader in) {
     out.println("-------------------------------------------------------------------------------------------------");
-    out.println("연쇄살인마가 살고 있다는 소문의 버려진 건물.");
-    out.println("모든 벽과 방이 붉은 색으로 칠해져 있어 사람들은 모두 이 건물을 ‘붉은 집’이라 부른다.");
-    out.println("늘 난 이 소문의 정체를 파헤치겠다는 친구 진영이에게 못 이겨 함께 이 붉은 집에 들어가기로 하였다.");
-    out.println("지금은 11시이고 만나기로 한 시간은 새벽 3시...");
-    out.println("진영이가 전화번호를 알고 있어 약속 시각에 맞춰 깨워줄 거라는 생각에 그만 잠들어버렸다.");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println("나를 깨운 괘종시계와 침대만 덩그러니 놓여 있는 이 방은, 벽과 천장이 모두 피처럼 붉은색이다.");
-    out.println("방 뒤쪽에는 작은 문이 하나 보인다. 옷장으로 통하는 문일까?");
-    out.println("붉은색으로 칠해져 있는 벽, 음산한 소리의 괘종시계.");
-    out.println("모두 소문의 집과 똑같다.");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println(".");
-    out.println("진영이는 어디 있지?");
-    out.println("그 전에, 나는 이 집에 혼자 있을까?");
-    out.println("'/entry' 명령어를 입력하세요.");
+    out.println("[필독]");
+    out.println("룰 및 유의할 점");
+    out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    out.println("아이템 사용법");
+    out.println("아이템 목록을 보고싶을 때는 '/itme/list' 명령어를 입력하세요.");
+    out.println("아이템을 습득할 때는 '/itme/add' 명령어를 입력하세요.");
+    out.println("아이템을 사용할 때는 '/itme/use' 명령어를 입력하세요.");
+    out.println("아이템을 수정할 때는 '/itme/update' 명령어를 입력하세요.");
+    out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    out.println("플레이어 기록하기");
+    out.println("플레이어 목록을 보고싶을 때는 '/player/list' 명령어를 입력하세요.");
+    out.println("플레이어를 등록할 때는 '/player/add' 명령어를 입력하세요.");
+    out.println("플레이어를 삭제할 때는 '/player/delete' 명령어를 입력하세요.");
+    out.println("플레이어 정보를 수정할 때는 '/player/update' 명령어를 입력하세요.");
+    out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    out.println("만약 예기치 못한 문제가 발생했다면 'quit' 명령어를 입력하셔서 처음부터 다시 시작하실 수 있습니다.");
     out.println("-------------------------------------------------------------------------------------------------");
-
   }
 }
