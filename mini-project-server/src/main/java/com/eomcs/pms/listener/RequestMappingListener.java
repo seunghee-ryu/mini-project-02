@@ -5,6 +5,7 @@ import java.util.Map;
 import com.eomcs.context.ApplicationContextListener;
 import com.eomcs.pms.domain.Item;
 import com.eomcs.pms.domain.Player;
+import com.eomcs.pms.handler.BedroomCommand;
 import com.eomcs.pms.handler.EntryCommand;
 import com.eomcs.pms.handler.ItemAddCommand;
 import com.eomcs.pms.handler.ItemDeleteCommand;
@@ -55,6 +56,9 @@ public class RequestMappingListener implements ApplicationContextListener {
     // 시작
     context.put("/start", new StartCommand());
     context.put("/entry", new EntryCommand());
+
+    // 침실로
+    context.put("/move/bedroom", new BedroomCommand());
   }
 
   @Override
