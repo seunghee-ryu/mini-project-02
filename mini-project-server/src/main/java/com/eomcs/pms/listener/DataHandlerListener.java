@@ -63,7 +63,9 @@ public class DataHandlerListener implements ApplicationContextListener {
 
     try {
       in = new BufferedReader(new FileReader(file));
+
       list.addAll(Arrays.asList(new Gson().fromJson(in, clazz)));
+
       System.out.printf("'%s' 에 총 %d 개의 데이터가 존재합니다.\n",
           file.getName(), list.size());
 

@@ -2,7 +2,6 @@ package com.eomcs.pms.handler;
 
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.sql.Date;
 import java.util.List;
 import com.eomcs.pms.domain.Player;
 import com.eomcs.util.Prompt;
@@ -24,7 +23,6 @@ public class PlayerAddCommand implements Command {
       player.setNo(Prompt.inputInt("번호? ", out, in));
       player.setName(Prompt.inputString("이름? ", out, in));
       player.setStage(Prompt.inputString("스테이지? ", out, in));
-      player.setRegisteredDate(new Date(System.currentTimeMillis()));
 
       playerList.add(player);
 
