@@ -5,11 +5,12 @@ import java.util.Map;
 import com.eomcs.context.ApplicationContextListener;
 import com.eomcs.pms.domain.Item;
 import com.eomcs.pms.domain.Player;
+import com.eomcs.pms.handler.EntryCommand;
 import com.eomcs.pms.handler.ItemAddCommand;
+import com.eomcs.pms.handler.ItemDeleteCommand;
 import com.eomcs.pms.handler.ItemDetailCommand;
 import com.eomcs.pms.handler.ItemListCommand;
 import com.eomcs.pms.handler.ItemUpdateCommand;
-import com.eomcs.pms.handler.ItemDeleteCommand;
 import com.eomcs.pms.handler.PlayerAddCommand;
 import com.eomcs.pms.handler.PlayerDeleteCommand;
 import com.eomcs.pms.handler.PlayerDetailCommand;
@@ -53,6 +54,7 @@ public class RequestMappingListener implements ApplicationContextListener {
 
     // 시작
     context.put("/start", new StartCommand());
+    context.put("/entry", new EntryCommand());
   }
 
   @Override
