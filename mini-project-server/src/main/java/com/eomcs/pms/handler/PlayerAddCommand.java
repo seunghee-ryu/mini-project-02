@@ -30,7 +30,7 @@ public class PlayerAddCommand implements Command {
       out.println("'/move/bedroom' 명령어를 이용해 침실로 이동합니다.");
 
     } catch(Exception e) {
-      out.printf("플레이어 등록 중 오류 발생! - %s\n", e.getMessage());
+      out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
     }
   }
 }

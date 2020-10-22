@@ -24,6 +24,7 @@ public class HallwayCommand implements Command {
     out.println("->            - 서재로 이동하려면 '/move/library'를 입력하세요");
     out.println("-> 이동(move) - 1층");
     out.println("->            - 1층로 이동하려면 '/move/1f'를 입력하세요");
+    out.println("-> 룰북을 보려면 '/rull'를 입력하세요");
     out.println("--------------------------------------------------------------------------------");
 
   }

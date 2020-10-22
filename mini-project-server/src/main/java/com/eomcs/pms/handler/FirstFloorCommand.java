@@ -22,19 +22,21 @@ public class FirstFloorCommand implements Command {
     out.println("-> 살펴본다(search) : 자물쇠 = 1");
     out.println("--------------------------------------------------------------------------------");
 
-    try {
-      String str = Prompt.inputString("무엇을 할까?(search) ", out, in);
+    while (true) {
+      try {
+        String str = Prompt.inputString("무엇을 할까?(search) ", out, in);
 
-      if (str.equalsIgnoreCase("search")) {
-        out.println("자물쇠를 확인했습니다.");
-      } else {
-        out.println("바로 뒤에서 인기척이 들립니다.");
+        if (str.equalsIgnoreCase("search")) {
+          out.println("자물쇠를 확인했습니다.");
+        } else {
+          out.println("바로 뒤에서 인기척이 들립니다.");
+        }
+
+      } catch (Exception e) {
+        out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
       }
 
-    } catch (Exception e) {
-      out.printf("아이템 삭제 처리 중 오류 발생! - %s\n", e.getMessage());
+
     }
-
-
   }
 }

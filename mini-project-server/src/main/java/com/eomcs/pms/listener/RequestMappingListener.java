@@ -14,6 +14,7 @@ import com.eomcs.pms.handler.ItemDeleteCommand;
 import com.eomcs.pms.handler.ItemDetailCommand;
 import com.eomcs.pms.handler.ItemListCommand;
 import com.eomcs.pms.handler.ItemUpdateCommand;
+import com.eomcs.pms.handler.LibraryCommand;
 import com.eomcs.pms.handler.PlayerAddCommand;
 import com.eomcs.pms.handler.PlayerDeleteCommand;
 import com.eomcs.pms.handler.PlayerDetailCommand;
@@ -29,10 +30,6 @@ public class RequestMappingListener implements ApplicationContextListener {
   @Override
   public void contextInitialized(Map<String,Object> context) {
     // 옵저버가 작업한 결과를 맵에서 꺼낸다.
-    //    List<Board> boardList = (List<Board>) context.get("boardList");
-    //    List<Member> memberList = (List<Member>) context.get("memberList");
-    //    List<Project> projectList = (List<Project>) context.get("projectList");
-    //    List<Task> taskList = (List<Task>) context.get("taskList");
 
     List<Item> itemList = (List<Item>) context.get("itemList");
     List<Player> playerList = (List<Player>) context.get("playerList");
@@ -43,7 +40,7 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/item/list", new ItemListCommand(itemList));
     context.put("/item/detail", new ItemDetailCommand(itemList));
     context.put("/item/update", new ItemUpdateCommand(itemList));
-    context.put("/item/delete", new ItemDeleteCommand(itemList)); // delete
+    context.put("/item/delete", new ItemDeleteCommand(itemList));
 
     // 플레이어
     context.put("/player/add", new PlayerAddCommand(playerList));
@@ -57,6 +54,8 @@ public class RequestMappingListener implements ApplicationContextListener {
 
     // 시작
     context.put("/start", new StartCommand());
+
+    // 엔트리
     context.put("/entry", new EntryCommand());
 
     // 침실
@@ -69,7 +68,7 @@ public class RequestMappingListener implements ApplicationContextListener {
     context.put("/move/1f", new FirstFloorCommand());
 
     // 서재
-    //    context.put("/move/library", new LibraryCommand());
+    context.put("/move/library", new LibraryCommand());
   }
 
   @Override

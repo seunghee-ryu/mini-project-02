@@ -23,6 +23,7 @@ public class ItemAddCommand implements Command {
       item.setNo(Prompt.inputInt("번호? ", out, in));
       item.setName(Prompt.inputString("아이템 이름? ", out, in));
       item.setLocation(Prompt.inputString("발견 장소? ", out, in));
+      item.setContent(Prompt.inputString("내용? ", out, in));
       itemList.add(item);
 
       out.println("아이템을 등록하였습니다.");

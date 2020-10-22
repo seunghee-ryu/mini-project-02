@@ -39,7 +39,7 @@ public class ItemDeleteCommand implements Command {
       out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
     } catch (Exception e) {
-      out.printf("아이템 삭제 처리 중 오류 발생! - %s\n", e.getMessage());
+      out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
     }
   }
 
