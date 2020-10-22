@@ -27,7 +27,6 @@ public class PlayerAddCommand implements Command {
       playerList.add(player);
 
       out.println("플레이어를 등록하였습니다.");
-      out.println("'/move/bedroom' 명령어를 이용해 침실로 이동합니다.");
 
     } catch(Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

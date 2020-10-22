@@ -25,15 +25,12 @@ public class PlayerDetailCommand implements Command {
 
         if (findByName(name) == null) {
           out.println("해당 이름의 플레이어가 없습니다.");
-          out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
           return;
         } else if (findByName(name) != null) {
           out.println("해당 이름의 플레이어가 존재합니다.");
           out.printf("번호: %s\n", player.getNo());
           out.printf("이름: %s\n", player.getName());
           out.printf("플레이 기록: %s\n", player.getStage());
-          out.printf("등록일: %s\n", player.getRegisteredDate());
-          out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
           return;
         }
         return;

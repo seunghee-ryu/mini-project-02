@@ -13,10 +13,10 @@ public class RullCommand implements Command {
     out.println("룰 및 유의할 점");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     out.println("아이템 사용법");
-    out.println("아이템 목록을 보고싶을 때는 '/itme/list' 명령어를 입력하세요.");
-    out.println("아이템을 습득할 때는 '/itme/add' 명령어를 입력하세요.");
-    out.println("아이템을 사용할 때는 '/itme/use' 명령어를 입력하세요.");
-    out.println("아이템을 수정할 때는 '/itme/update' 명령어를 입력하세요.");
+    out.println("아이템 목록을 보고싶을 때는 '/item/list' 명령어를 입력하세요.");
+    out.println("아이템을 습득할 때는 '/item/add' 명령어를 입력하세요.");
+    out.println("아이템을 삭제할 때는 '/item/delete' 명령어를 입력하세요.");
+    out.println("아이템을 수정할 때는 '/item/update' 명령어를 입력하세요.");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     out.println("플레이어 기록하기");
     out.println("플레이어 목록을 보고싶을 때는 '/player/list' 명령어를 입력하세요.");
@@ -26,6 +26,9 @@ public class RullCommand implements Command {
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     out.println("만약 예기치 못한 문제가 발생했다면 'quit' 명령어를 입력하셔서 처음부터 다시 시작하실 수 있습니다.");
     out.println("'quit' 명령어를 입력할 경우 데이터가 저장되지 않습니다.");
+    out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+    out.println("'stop' 명령어를 입력할 경우 데이터를 저장하며 게임을 종료합니다.");
+    out.println("플레이어 기록을 남기고 종료해 주세요.");
     out.println("-------------------------------------------------------------------------------------------------");
     out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 

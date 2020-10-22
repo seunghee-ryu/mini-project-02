@@ -15,11 +15,13 @@ import com.eomcs.pms.handler.ItemDetailCommand;
 import com.eomcs.pms.handler.ItemListCommand;
 import com.eomcs.pms.handler.ItemUpdateCommand;
 import com.eomcs.pms.handler.LibraryCommand;
+import com.eomcs.pms.handler.NewPlayerCommand;
 import com.eomcs.pms.handler.PlayerAddCommand;
 import com.eomcs.pms.handler.PlayerDeleteCommand;
 import com.eomcs.pms.handler.PlayerDetailCommand;
 import com.eomcs.pms.handler.PlayerListCommand;
 import com.eomcs.pms.handler.PlayerUpdateCommand;
+import com.eomcs.pms.handler.RecordedPlayerCommand;
 import com.eomcs.pms.handler.RullCommand;
 import com.eomcs.pms.handler.StartCommand;
 
@@ -30,10 +32,8 @@ public class RequestMappingListener implements ApplicationContextListener {
   @Override
   public void contextInitialized(Map<String,Object> context) {
     // 옵저버가 작업한 결과를 맵에서 꺼낸다.
-
     List<Item> itemList = (List<Item>) context.get("itemList");
     List<Player> playerList = (List<Player>) context.get("playerList");
-
 
     // 아이템
     context.put("/item/add", new ItemAddCommand(itemList));
@@ -57,6 +57,12 @@ public class RequestMappingListener implements ApplicationContextListener {
 
     // 엔트리
     context.put("/entry", new EntryCommand());
+
+    // 새 플레이어
+    context.put("/newPlayer", new NewPlayerCommand());
+
+    // 기존 플레이어
+    context.put("/recordedPlayer", new RecordedPlayerCommand());
 
     // 침실
     context.put("/move/bedroom", new BedroomCommand());

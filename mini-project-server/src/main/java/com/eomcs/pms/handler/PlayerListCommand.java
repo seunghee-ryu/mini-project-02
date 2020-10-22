@@ -25,13 +25,11 @@ public class PlayerListCommand implements Command {
 
     while (iterator.hasNext()) {
       Player player = iterator.next();
-      out.printf("번호: %s, 이름: %s, 플레이 기록: %s\n",
+      out.printf("번호: %s, 이름: %s\n",
           player.getNo(),
-          player.getName(),
-          player.getStage()
+          player.getName()
           );
     }
-    out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
   }
 
 }

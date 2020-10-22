@@ -11,7 +11,7 @@ public class BedroomCommand implements Command {
   public void execute(PrintWriter out, BufferedReader in) {
 
     out.println("--------------------------------------------------------------------------------");
-    out.println("                                침실");
+    out.println("[침실]");
     out.println("--------------------------------------------------------------------------------");
     out.println("벽과 천장, 모두 붉은색.");
     out.println("오랫동안 관리 없이 남겨진 벽지와 물건들.");
@@ -24,7 +24,7 @@ public class BedroomCommand implements Command {
     out.println("모두 소문의 집과 똑같다.");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     out.println("무엇을 할까?");
-    out.println("-> 살펴본다(search) : 침대 = 1, 작은 문 = 2");
+    out.println("-> 살펴본다(search) : 1 = 침대, 2 = 작은 문");
     out.println("-> 이동(move) - 복도");
     out.println("->            - 복도로 이동하려면 '/move/hallway'를 입력하세요");
     out.println("--------------------------------------------------------------------------------");
@@ -36,7 +36,6 @@ public class BedroomCommand implements Command {
 
 
         if (str.equalsIgnoreCase("search")) {
-
 
           out.println("살펴본다");
           String s = Integer.toString(Prompt.inputInt("번호? ", out, in));
@@ -59,8 +58,8 @@ public class BedroomCommand implements Command {
               String answer = Prompt.inputString("정답? ", out, in);
               if (answer.equalsIgnoreCase("socket")) {
                 out.println("자물쇠가 가벼운 찰칵 소리와 함께 열린다.");
-                out.println("상자 안에는 일기처럼 보이는 글이 있는 종이가 있다.");
-                out.println("[살인마의 기록 #1 - 내용 : 첫글자는 th] 을 가방에 넣었다.");
+                out.println("상자 안에는 열쇠가 하나 들어있다.");
+                out.println("[세모 손잡이가 있는 열쇠] 를 가방에 넣었다.");
                 out.println("'/item/add' 명령어를 입력하여 아이템을 저장하세요.");
                 break;
 

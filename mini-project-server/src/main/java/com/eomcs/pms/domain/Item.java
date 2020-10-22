@@ -4,7 +4,6 @@ public class Item {
   private int no;
   private String name;
   private String location;
-  private String content;
 
   public int getNo() {
     return no;
@@ -24,15 +23,6 @@ public class Item {
   public void setLocation(String location) {
     this.location = location;
   }
-  public String getContent() {
-    return content;
-  }
-  public void setContent(String content) {
-    this.content = content;
-  }
-
-
-
 }
 
 

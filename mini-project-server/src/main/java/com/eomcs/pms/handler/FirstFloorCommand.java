@@ -19,24 +19,42 @@ public class FirstFloorCommand implements Command {
     out.println("복도 건너편에 보이는 붉은 현관문은, 똑같은 색의 자물쇠로 잠겨있다.");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     out.println("무엇을 할까?");
-    out.println("-> 살펴본다(search) : 자물쇠 = 1");
+    out.println("-> 살펴본다(search) : 자물쇠를 살핀다.");
     out.println("--------------------------------------------------------------------------------");
-
     while (true) {
       try {
         String str = Prompt.inputString("무엇을 할까?(search) ", out, in);
 
         if (str.equalsIgnoreCase("search")) {
           out.println("자물쇠를 확인했습니다.");
-        } else {
-          out.println("바로 뒤에서 인기척이 들립니다.");
-        }
+          out.println("자물쇠는 알파벳 아홉글자를 입력할 수 있습니다.");
+          out.println(".");
+          out.println(".");
+          out.println("[질문]");
+          out.println("하나의 TCP 접속에 전이중 통신 채널을 제공하는 컴퓨터 통신 프로토콜은 무엇인가?");
+          out.println("서재와 침실에서의 답을 생각해내라.");
 
-      } catch (Exception e) {
-        out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
+          String answer = Prompt.inputString("정답? ", out, in);
+          if (answer.equalsIgnoreCase("websocket")) {
+            out.println("자물쇠가 가벼운 찰칵 소리와 함께 열린다.");
+            out.println("탈출에 성공하였습니다.");
+            break;
+
+          } else if (!answer.equalsIgnoreCase("websocket")) {
+            out.println("자물쇠는 열리지 않았다.");
+            out.println("뒤에서 인기척이 느껴집니다.");
+            break;
+          }
+
+        } else {
+          out.println("뒤에서 인기척이 느껴집니다.");
+          break;
+        }
       }
 
-
+      catch (Exception e) {
+        out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());
+      }
     }
   }
 }

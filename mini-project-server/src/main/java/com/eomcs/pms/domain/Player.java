@@ -1,12 +1,9 @@
 package com.eomcs.pms.domain;
 
-import java.util.Date;
-
 public class Player {
   private int no;
   private String name;
   private String stage;
-  private Date RegisteredDate;
 
   public int getNo() {
     return no;
@@ -26,14 +23,6 @@ public class Player {
   public void setStage(String stage) {
     this.stage = stage;
   }
-  public Date getRegisteredDate() {
-    return RegisteredDate;
-  }
-  public void setRegisteredDate(Date registeredDate) {
-    RegisteredDate = registeredDate;
-  }
-
-
 }
 
 
