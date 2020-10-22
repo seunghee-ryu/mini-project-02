@@ -14,7 +14,7 @@ public class EntryCommand implements Command {
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     out.println("새로 시작하는 플레이어라면");
     out.println("'/player/add' 명령어를 입력하세요.");
-    out.println("플레이어 등록을 완료하셨다면 '/move/bedroom' 명령어를 입력하세요.");
+    out.println("플레이어 등록을 완료하셨다면 '/move/hallway' 명령어를 입력하세요.");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
     out.println("기존에 플레이 기록을 가지고 있는 플레이어라면");
     out.println("'/player/list' 명령어를 입력해서 플레이 기록을 확인하세요.");

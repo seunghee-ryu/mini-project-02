@@ -19,10 +19,7 @@ public class StartCommand implements Command {
     out.println(".");
     out.println(".");
     out.println(".");
-    out.println("나를 깨운 괘종시계와 침대만 덩그러니 놓여 있는 이 방은, 벽과 천장이 모두 피처럼 붉은색이다.");
-    out.println("방 뒤쪽에는 작은 문이 하나 보인다. 옷장으로 통하는 문일까?");
-    out.println("붉은색으로 칠해져 있는 벽, 음산한 소리의 괘종시계.");
-    out.println("모두 소문의 집과 똑같다.");
+    out.println("일어나서 본 이 방은, 벽과 천장이 모두 피처럼 붉은색이다.");
     out.println(".");
     out.println(".");
     out.println(".");

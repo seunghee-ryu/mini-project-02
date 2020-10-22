@@ -20,6 +20,8 @@ public class BedroomCommand implements Command {
     out.println("손가락 끝에 묻어나는 회색빛 먼지 말고는 아무것도 없다.");
     out.println("침대 옆으로 보이는 문은 방문보다 약간 작다.");
     out.println("문틈으로 뭔가 반짝이는 빛이 보이지만, 별다른 특별한 점은 없다.");
+    out.println("붉은색으로 칠해져 있는 벽, 음산한 소리의 괘종시계.");
+    out.println("모두 소문의 집과 똑같다.");
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     out.println("무엇을 할까?");
     out.println("-> 살펴본다(search) : 침대 = 1, 작은 문 = 2");
@@ -31,6 +33,8 @@ public class BedroomCommand implements Command {
     while(true) {
       try {
         String str = Prompt.inputString("무엇을 할까?(search/move) ", out, in);
+
+
         if (str.equalsIgnoreCase("search")) {
 
 

@@ -43,18 +43,19 @@ public class LibraryCommand implements Command {
               out.println("둥근 손잡이가 있는 열쇠를 가방에 넣었다.");
               out.println("'/item/add' 명령어를 입력하여 아이템을 저장하세요.");
               break;
+
             } else if (!answer.equalsIgnoreCase("HTML")) {
               out.print("자물쇠는 열리지 않았다.\n");
             }
           } else if (no == 2) {
             out.print("오래된 저택에 있을 법한 생김새를 가진 의자는 낡았지만, 여전히 푹신하다.\n"
                 + "다리부터 등받이, 바닥까지 살펴보았지만, 눈에 띄는 점은 없다.\n");
-            break;
+
           } else if (no == 3) {
             out.print("램프 자체의 생김새는 보통 램프와 별반 다를 점이 없다. 다만, 램프 커버가 어두운 색이라 옆으로는 빛이 나오지 않고, 램프의 바로 아래만 비춘다.\n"
                 + "커버를 뒤집어 보니 일기처럼 보이는 글이 있는 종이가 붙어있다.\n");
             out.println("-----------------------");
-            out.println("[살인마의 기록 #2 - 내 : read] 를 가방에 넣었다.");
+            out.println("[살인마의 기록 #2 - 내용 : read] 를 가방에 넣었다.");
             out.println(" 'item/add' 명령어를 입력하여 아이템을 저장하세요.");
             break;
           } else {
