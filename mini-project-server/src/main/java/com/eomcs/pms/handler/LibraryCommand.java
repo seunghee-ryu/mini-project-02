@@ -33,9 +33,10 @@ public class LibraryCommand implements Command {
 
           if (no == 1) {
             out.println("책장은 심리학 서적과 추리 소설, 퍼즐 관련 책들로 가득하다.");
-            out.println("대부분 오래된 티가 나고 먼지가 쌓여있지만, 맨 위 칸의 책들은 유독 깔끔하다. 손을 뻗으면 딱 닿는 거리. ");
+            out.println("대부분 오래된 티가 나고 먼지가 쌓여있지만, 맨 위 칸의 책들은 유독 깔끔하다.");
+            out.println("손을 뻗으면 딱 닿는 거리.");
             out.println("책을 한 권을 꺼내서 찬찬히 살펴본다.");
-            out.println("책은 사슬로 묶인 채 네 자리 영문 자물쇠로 잠겨있다.");
+            out.println("책은 사슬로 묶인 채 자리 영문 자물쇠로 잠겨있다.");
             out.println("책 표지에는 질문지가 붙어있다.");
             out.println(".");
             out.println(".");

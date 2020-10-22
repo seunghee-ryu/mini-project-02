@@ -57,20 +57,17 @@ public class PlayerDeleteCommand implements Command {
 
       if (index == -1) {
         out.println("해당 번호의 플레이어가 없습니다.");
-        out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
         return;
       }
 
       String response = Prompt.inputString("정말 삭제하시겠습니까?(y/N) ", out, in);
       if (!response.equalsIgnoreCase("y")) {
         out.println("플레이어 삭제를 취소하였습니다.");
-        out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
         return;
       }
 
       playerList.remove(index);
       out.println("플레이어를 삭제하였습니다.");
-      out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
 
     } catch (Exception e) {
       out.printf("작업 처리 중 오류 발생! - %s\n", e.getMessage());

@@ -70,11 +70,12 @@ public class RequestMappingListener implements ApplicationContextListener {
     // 복도
     context.put("/move/hallway", new HallwayCommand());
 
+    // 서재
+    context.put("/move/library", new LibraryCommand());
+
     // 1층
     context.put("/move/1f", new FirstFloorCommand());
 
-    // 서재
-    context.put("/move/library", new LibraryCommand());
   }
 
   @Override

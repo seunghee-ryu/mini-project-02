@@ -23,7 +23,6 @@ public class ItemUpdateCommand implements Command {
 
       if (item == null) {
         out.println("해당 번호의 아이템이 없습니다.");
-        out.println("'/move/hallway' 명령어를 이용해 복도로 이동합니다.");
         return;
       }
 
