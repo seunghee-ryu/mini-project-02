@@ -27,6 +27,12 @@ public class FirstFloorCommand implements Command {
       try {
         String str = Prompt.inputString("무엇을 할까?(search) ", out, in);
 
+        if (str.equalsIgnoreCase("move")) {
+          if (str.equalsIgnoreCase("move")) {
+            break;
+          }
+        }
+
         if (str.equalsIgnoreCase("search")) {
           out.println("자물쇠를 확인했습니다.");
           out.println("자물쇠는 알파벳 아홉글자를 입력할 수 있습니다.");
@@ -50,6 +56,7 @@ public class FirstFloorCommand implements Command {
           }
 
         } else {
+
           out.println("뒤에서 인기척이 느껴집니다.");
           out.println("도망쳤습니다.");
           break;
