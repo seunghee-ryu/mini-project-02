@@ -20,6 +20,8 @@ public class FirstFloorCommand implements Command {
     out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
     out.println("무엇을 할까?");
     out.println("-> 살펴본다(search) : 자물쇠를 살핀다.");
+    out.println("-> 이동(move) - 복도");
+    out.println("->            - 복도로 이동하려면 '/move/hallway'를 입력하세요");
     out.println("--------------------------------------------------------------------------------");
     while (true) {
       try {

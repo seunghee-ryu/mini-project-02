@@ -22,7 +22,7 @@ public class PlayerAddCommand implements Command {
       Player player = new Player();
       player.setNo(Prompt.inputInt("번호? ", out, in));
       player.setName(Prompt.inputString("이름? ", out, in));
-      player.setStage(Prompt.inputString("스테이지? ", out, in));
+      player.setStage(Prompt.inputString("플레이 기록? ", out, in));
 
       playerList.add(player);
 

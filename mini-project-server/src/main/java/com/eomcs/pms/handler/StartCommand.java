@@ -19,7 +19,7 @@ public class StartCommand implements Command {
     out.println(".");
     out.println(".");
     out.println(".");
-    out.println("일어나서 본 이 방은, 벽과 천장이 모두 피처럼 붉은색이다.");
+    out.println("일어나서 본 이 집은, 벽과 천장이 모두 피처럼 붉은색이다.");
     out.println(".");
     out.println(".");
     out.println(".");
